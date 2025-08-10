@@ -35,9 +35,9 @@ public class NotesApp {
 
         try (FileWriter fw = new FileWriter(FILE_NAME, true)) { // append mode
             fw.write(note + System.lineSeparator());
-            System.out.println("✅ Note saved successfully!");
+            System.out.println("Note saved successfully!");
         } catch (IOException e) {
-            System.out.println("❌ Error writing to file: " + e.getMessage());
+            System.out.println("Error writing to file: " + e.getMessage());
         }
     }
 
@@ -49,9 +49,9 @@ public class NotesApp {
                 System.out.println(line);
             }
         } catch (FileNotFoundException e) {
-            System.out.println("❌ No notes found. Add a note first!");
+            System.out.println("No notes found. Add a note first!");
         } catch (IOException e) {
-            System.out.println("❌ Error reading file: " + e.getMessage());
+            System.out.println("Error reading file: " + e.getMessage());
         }
     }
 }
